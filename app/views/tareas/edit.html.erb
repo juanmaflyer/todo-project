@@ -1,0 +1,15 @@
+<h1>Editing tarea</h1>
+
+<% form_for([@lista_de_tarea, @tarea]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', lista_de_tarea_path(params[:lista_de_tarea_id]) %>

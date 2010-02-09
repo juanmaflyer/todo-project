@@ -1,0 +1,16 @@
+<h1>Editing lista_de_tarea</h1>
+
+<% form_for(@lista_de_tarea) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @lista_de_tarea %> |
+<%= link_to 'Back', lista_de_tareas_path %>
