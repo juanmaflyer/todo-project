@@ -6,7 +6,3 @@ Se puede realizar el registro de usuario, y cada usuario tiene la posibilidad de
 Para el sistema de autenticación y control de sesiones se utilizó Authlogic.
 
 
-
------TODO: 
-Corregir las validaciones en la registración
-Realizar los TESTS
