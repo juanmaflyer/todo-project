@@ -1,5 +1,5 @@
 <% form_for @user_session do |f| %>
-  <%= f.error_messages %>
+  <%= f.error_messages :header_message => "Usuario Invalido!", :message => "Chequea los siguientes campos:", :header_tag => :h3 %>
   <p>
     <%= f.label :login %><br />
     <%= f.text_field :login %>

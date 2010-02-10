@@ -1,18 +1,13 @@
-<p>
-  <b class=grande>Lista de Tarea:</b> <br /> <br />
-  &nbsp <span class=grande><%=h @lista_de_tarea.nombre %> </span>
-</p>
-
 <h2> Tareas: </h2>
 
-<table>
+<table style="padding-left:10px">
 
 <ul>
 <% @lista_de_tarea.tareas.each do |t| %>  
-<tr>
-<td><li> <%= t.nombre %></li> </td>
-<td><%= link_to 'Edit', edit_lista_de_tarea_tarea_path(@lista_de_tarea,t) %></td>
-<td><%= link_to 'Destroy', lista_de_tarea_tarea_path(@lista_de_tarea,t), :confirm => 'Are you sure?', :method => :delete %></td>
+<tr class="<%= cycle('rowA', 'rowB') %>">
+<td><li> <%=h t.nombre %></li> </td>
+<td><%= link_to 'Editar', edit_lista_de_tarea_tarea_path(@lista_de_tarea,t) %></td>
+<td><%= link_to 'Eliminar', lista_de_tarea_tarea_path(@lista_de_tarea,t), :confirm => 'Are you sure?', :method => :delete %></td>
 <tr/>
 <% end %> 
 </ul>

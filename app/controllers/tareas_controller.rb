@@ -1,20 +1,25 @@
 class TareasController < ApplicationController
-
+  class NoAutorizado < RuntimeError
+  end
+  
+  before_filter :usuario_autorizado?, :only => [:new, :edit]
+  rescue_from NoAutorizado, :with => :usuario_invalido
+  
   # GET /tareas/new
   # GET /tareas/new.xml
   def new
 	@lista_de_tarea = ListaDeTarea.find(params[:lista_de_tarea_id])
-    @tarea = @lista_de_tarea.tareas.new
+    @tarea = @lista_de_tarea.tareas.build
   end
 
   # POST /tareas
   # POST /tareas.xml
   def create
-	@list = ListaDeTarea.find(params[:lista_de_tarea_id])
-    @task = @list.tareas.new(params[:tarea])
-    if @task.save
-      flash[:notice] = "New task created!"
-      redirect_to lista_de_tarea_url(@list)
+	@lista_de_tarea = ListaDeTarea.find(params[:lista_de_tarea_id])
+    @tarea = @lista_de_tarea.tareas.build(params[:tarea])
+    if @tarea.save
+      flash[:notice] = "Nueva tarea creada!"
+      redirect_to lista_de_tarea_url(@lista_de_tarea)
     else
       render :action => :new
     end
@@ -31,13 +36,13 @@ class TareasController < ApplicationController
   # PUT /tareas/1
   # PUT /tareas/1.xml
   def update
-	@lt = ListaDeTarea.find(params[:lista_de_tarea_id])
-    @tarea = @lt.tareas.find(params[:id])
+	@lista_de_tarea = ListaDeTarea.find(params[:lista_de_tarea_id])
+    @tarea = @lista_de_tarea.tareas.find(params[:id])
 
     
       if @tarea.update_attributes(params[:tarea])
-        flash[:notice] = 'La tarea fue actualizada satisfacotiramente'
-        redirect_to lista_de_tarea_url(@lt)
+        flash[:notice] = 'La tarea fue modificada satisfacotiramente'
+        redirect_to lista_de_tarea_url(@lista_de_tarea)
       else
         render :action => "edit" 
       end
@@ -55,4 +60,28 @@ class TareasController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  private
+  def usuario_autorizado?
+  
+	#--- Esto funciona y se puede hacer, pero hay un método que devuelve los ids asociados al objecto padre
+	#--- el método es current_user.lista_de_tarea_ids (el objecto asociado EN SINGULAR!)
+	# @lista_de_tareas = current_user.lista_de_tareas
+	# @ids = []
+	# @lista_de_tareas.each do |lt|
+		# @ids << lt.id
+	# end
+	
+	@ids = current_user.lista_de_tarea_ids
+	unless @ids.include?(params[:lista_de_tarea_id].to_i)
+		raise NoAutorizado
+	end
+  end
+  
+  def usuario_invalido
+	flash[:error] = "Intentaste agregar o editar una tarea en una lista que no te pertenece"
+	redirect_to lista_de_tareas_path
+	
+  end
+  
 end

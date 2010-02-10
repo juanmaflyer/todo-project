@@ -1,9 +1,13 @@
 class ListaDeTareasController < ApplicationController
   # GET /lista_de_tareas
   # GET /lista_de_tareas.xml
-  #before_filter :usuario_autorizado?, :only => [:show] #, :edit, :update, :destroy]
+  class NoAutorizado < RuntimeError
+  end
+  
+  before_filter :usuario_autorizado?, :only => [:show, :edit]
+  rescue_from NoAutorizado, :with => :usuario_invalido
+  
   def index
-	@user = current_user
 	@lista_de_tareas = current_user.lista_de_tareas
 
     respond_to do |format|
@@ -42,7 +46,7 @@ class ListaDeTareasController < ApplicationController
     respond_to do |format|
       if @lista_de_tarea.save
         flash[:notice] = 'La Lista de Tareas fue creada satisfactoriamente'
-        format.html { redirect_to(@lista_de_tarea) }
+        format.html { redirect_to lista_de_tareas_url }
         format.xml  { render :xml => @lista_de_tarea, :status => :created, :location => @lista_de_tarea }
       else
         format.html { render :action => "new" }
@@ -58,7 +62,7 @@ class ListaDeTareasController < ApplicationController
 
     respond_to do |format|
       if @lista_de_tarea.update_attributes(params[:lista_de_tarea])
-        flash[:notice] = 'ListaDeTarea was successfully updated.'
+        flash[:notice] = 'Se actualizo la lista de tareas'
         format.html { redirect_to(@lista_de_tarea) }
         format.xml  { head :ok }
       else
@@ -80,17 +84,29 @@ class ListaDeTareasController < ApplicationController
     end
   end
   
-  # private
-  # def usuario_autorizado?
+
+  
+  private
+  def usuario_autorizado?
+	
+	#--- Esto funciona y se puede hacer, pero hay un método que devuelve los ids asociados al objecto padre
+	#--- el método es current_user.lista_de_tarea_ids (el objecto asociado EN SINGULAR!)
 	# @lista_de_tareas = current_user.lista_de_tareas
 	# @ids = []
 	# @lista_de_tareas.each do |lt|
 		# @ids << lt.id
 	# end
-	# unless @ids.include?(params[:lista_de_tarea_id])
-		# flash[:notice] = "Te esta intentando meter en una lista que no te pertenece!"
-	#	redirect_to()
-	# end
-  # end
+	
+	@ids = current_user.lista_de_tarea_ids
+	unless @ids.include?(params[:id].to_i)
+		raise NoAutorizado
+	end
+  end
+  
+  def usuario_invalido
+	flash[:error] = "Intentaste ver o editar una lista que no te pertenece"
+	redirect_to lista_de_tareas_path
+	
+  end
   
 end
