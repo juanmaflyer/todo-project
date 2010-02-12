@@ -32670,251 +32670,954 @@ Rendering home/index
   [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '9eed6f590f74bfa0781348343adeeca72e196de370c7a7bbf35e5559f5b3518882375efbf88919fe3da21fd8faf7c6fd51517231ef566f65a6c562d3fbea8df3') LIMIT 1[0m
 Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
-  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (41.9ms)[0m   [0;1mSHOW TABLES[0m
-  [4;35;1mSQL (79.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
-  [4;36;1mSQL (11.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
-  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
-  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
-Migrating to CreateListaDeTareas (20100208193202)
-  [4;35;1mSQL (5.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
-  [4;36;1mSQL (50.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100208193202')[0m
-Migrating to CreateUsers (20100208193700)
-  [4;35;1mSQL (27.8ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
-  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100208193700')[0m
-Migrating to CreateTareas (20100208215951)
-  [4;35;1mSQL (28.6ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
-  [4;36;1mSQL (3.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100208215951')[0m
-  [4;35;1mSQL (33.1ms)[0m   [0mSHOW TABLES[0m
-  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
-  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
-  [4;36;1mSQL (13.2ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
-  [4;35;1mSQL (2.7ms)[0m   [0mdescribe `lista_de_tareas`[0m
-  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `lista_de_tareas`[0m
-  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `tareas`[0m
-  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `tareas`[0m
-  [4;35;1mSQL (1.6ms)[0m   [0mSHOW KEYS FROM `tareas`[0m
-  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `users`[0m
-  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
-  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing HomeController#index (for 127.0.0.1 at 2010-02-10 04:46:48) [GET]
+Processing HomeController#index (for 127.0.0.1 at 2010-02-10 02:19:42) [GET]
 Rendering template within layouts/application
 Rendering home/index
-  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-Completed in 251ms (View: 237, DB: 3) | 200 OK [http://localhost/]
-  [4;35;1mSQL (0.6ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '9eed6f590f74bfa0781348343adeeca72e196de370c7a7bbf35e5559f5b3518882375efbf88919fe3da21fd8faf7c6fd51517231ef566f65a6c562d3fbea8df3') LIMIT 1[0m
+Completed in 172ms (View: 172, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing UsersController#new (for 127.0.0.1 at 2010-02-10 04:47:11) [GET]
-  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Processing HomeController#index (for 127.0.0.1 at 2010-02-10 02:19:48) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '9eed6f590f74bfa0781348343adeeca72e196de370c7a7bbf35e5559f5b3518882375efbf88919fe3da21fd8faf7c6fd51517231ef566f65a6c562d3fbea8df3') LIMIT 1[0m
+Completed in 93ms (View: 93, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-02-10 02:19:49) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '9eed6f590f74bfa0781348343adeeca72e196de370c7a7bbf35e5559f5b3518882375efbf88919fe3da21fd8faf7c6fd51517231ef566f65a6c562d3fbea8df3') LIMIT 1[0m
+Redirected to http://127.0.0.1:3001/
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-10 02:19:49) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 140ms (View: 140, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-10 02:20:39) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-10 02:20:42) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-02-10 02:20:47) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"password"=>"juanma88", "login"=>"juanmaflyer"}, "authenticity_token"=>"6lAgMleh1xW1iuYsGw+GFIEshKAiMH31keKuyGOfxKY="}
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'juanmaflyer') LIMIT 1[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3001/
+Completed in 625ms (DB: 32) | 302 Found [http://127.0.0.1/user_sessions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-10 02:20:48) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-10 02:20:53) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
 Rendering template within layouts/application
 Rendering users/new
-Rendered users/_form (35.6ms)
-Completed in 161ms (View: 111, DB: 4) | 200 OK [http://localhost/users/new]
-  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendered users/_form (16.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Completed in 110ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing UsersController#create (for 127.0.0.1 at 2010-02-10 04:47:28) [POST]
-  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"ExS6mETAR12TqBfllR2dR0BU6CzS7/1txyWHuHXscCA=", "user"=>{"password_confirmation"=>"holadios", "password"=>"holadios", "login"=>"juanmaflyer", "email"=>"juanmaflyer@gmail.com"}}
-  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
-  [4;36;1mUser Load (16.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'juanmaflyer@gmail.com') LIMIT 1[0m
-  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'juanmaflyer') LIMIT 1[0m
-  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-  [4;35;1mUser Create (13.4ms)[0m   [0mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `password_salt`, `persistence_token`, `login`, `email`) VALUES('2010-02-10 06:47:29', 'ed8a9db442d019e828c5b88ec700b7d087bfb80a06f8767cdb33243bc1595980bd759295b0de88ded6176ea36ff2f8677553596e9b16b2d1335df6e9010fdfa5', '2010-02-10 06:47:29', 'elyGdG5sZxBh0uxOnp7w', 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02', 'juanmaflyer', 'juanmaflyer@gmail.com')[0m
-  [4;36;1mSQL (24.3ms)[0m   [0;1mCOMMIT[0m
-Redirected to http://localhost:3000/lista_de_tareas
-Completed in 981ms (DB: 60) | 302 Found [http://localhost/users]
-  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Processing UsersController#new (for 127.0.0.1 at 2010-02-10 02:22:23) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (15.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing ListaDeTareasController#index (for 127.0.0.1 at 2010-02-10 04:47:29) [GET]
-  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-Rendering template within layouts/lista_de_tareas
-Rendering lista_de_tareas/index
-  [4;35;1mListaDeTarea Load (1.7ms)[0m   [0mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
-Completed in 280ms (View: 147, DB: 6) | 200 OK [http://localhost/lista_de_tareas]
-  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-02-10 02:22:25) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3001/
+Completed in 47ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing ListaDeTareasController#new (for 127.0.0.1 at 2010-02-10 04:47:32) [GET]
-  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-  [4;36;1mListaDeTarea Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
-Rendering template within layouts/lista_de_tareas
-Rendering lista_de_tareas/new
-Completed in 175ms (View: 60, DB: 9) | 200 OK [http://localhost/lista_de_tareas/new]
-  [4;35;1mSQL (0.6ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ListaDeTareasController#create (for 127.0.0.1 at 2010-02-10 04:47:33) [POST]
-  Parameters: {"commit"=>"Create", "authenticity_token"=>"ExS6mETAR12TqBfllR2dR0BU6CzS7/1txyWHuHXscCA=", "lista_de_tarea"=>{"nombre"=>"asdfasdf"}}
-  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-  [4;35;1mListaDeTarea Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
-  [4;36;1mSQL (5.5ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mListaDeTarea Create (0.9ms)[0m   [0mINSERT INTO `lista_de_tareas` (`created_at`, `nombre`, `updated_at`, `user_id`) VALUES('2010-02-10 06:47:34', 'asdfasdf', '2010-02-10 06:47:34', 1)[0m
-  [4;36;1mSQL (10.7ms)[0m   [0;1mCOMMIT[0m
-Redirected to http://localhost:3000/lista_de_tareas
-Completed in 122ms (DB: 24) | 302 Found [http://localhost/lista_de_tareas]
-  [4;35;1mSQL (0.7ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ListaDeTareasController#index (for 127.0.0.1 at 2010-02-10 04:47:34) [GET]
-  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-Rendering template within layouts/lista_de_tareas
-Rendering lista_de_tareas/index
-  [4;35;1mListaDeTarea Load (1.1ms)[0m   [0mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
-  [4;36;1mListaDeTarea Columns (4.5ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
-  [4;35;1mTarea Load (1.8ms)[0m   [0mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 1) [0m
-Completed in 191ms (View: 62, DB: 12) | 200 OK [http://localhost/lista_de_tareas]
-  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ListaDeTareasController#new (for 127.0.0.1 at 2010-02-10 04:47:35) [GET]
-  [4;36;1mUser Columns (6.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-  [4;36;1mListaDeTarea Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
-Rendering template within layouts/lista_de_tareas
-Rendering lista_de_tareas/new
-Completed in 139ms (View: 20, DB: 11) | 200 OK [http://localhost/lista_de_tareas/new]
-  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ListaDeTareasController#create (for 127.0.0.1 at 2010-02-10 04:47:39) [POST]
-  Parameters: {"commit"=>"Create", "authenticity_token"=>"ExS6mETAR12TqBfllR2dR0BU6CzS7/1txyWHuHXscCA=", "lista_de_tarea"=>{"nombre"=>"asdfsdaf"}}
-  [4;35;1mUser Columns (23.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-  [4;35;1mListaDeTarea Columns (13.5ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
-  [4;36;1mSQL (12.2ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mListaDeTarea Create (0.9ms)[0m   [0mINSERT INTO `lista_de_tareas` (`created_at`, `nombre`, `updated_at`, `user_id`) VALUES('2010-02-10 06:47:40', 'asdfsdaf', '2010-02-10 06:47:40', 1)[0m
-  [4;36;1mSQL (4.8ms)[0m   [0;1mCOMMIT[0m
-Redirected to http://localhost:3000/lista_de_tareas
-Completed in 326ms (DB: 57) | 302 Found [http://localhost/lista_de_tareas]
-  [4;35;1mSQL (0.8ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing ListaDeTareasController#index (for 127.0.0.1 at 2010-02-10 04:47:40) [GET]
-  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-Rendering template within layouts/lista_de_tareas
-Rendering lista_de_tareas/index
-  [4;35;1mListaDeTarea Load (1.1ms)[0m   [0mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
-  [4;36;1mListaDeTarea Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
-  [4;35;1mTarea Load (1.1ms)[0m   [0mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 1) [0m
-  [4;36;1mTarea Load (1.2ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 2) [0m
-Completed in 169ms (View: 62, DB: 10) | 200 OK [http://localhost/lista_de_tareas]
-  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing HomeController#index (for 127.0.0.1 at 2010-02-10 04:47:47) [GET]
+Processing HomeController#index (for 127.0.0.1 at 2010-02-10 02:22:25) [GET]
 Rendering template within layouts/application
 Rendering home/index
-  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-Completed in 94ms (View: 80, DB: 4) | 200 OK [http://localhost/]
-  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing ListaDeTareasController#index (for 127.0.0.1 at 2010-02-10 04:47:52) [GET]
-  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-Rendering template within layouts/lista_de_tareas
+Processing HomeController#index (for 127.0.0.1 at 2010-02-10 02:22:51) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (265.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (266.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-10 03:18:42) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Columns (1078.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 16985ms (View: 14985, DB: 1609) | 200 OK [http://127.0.0.1/]
+  [4;35;1mSQL (47.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-10 03:57:18) [GET]
+  [4;35;1mUser Columns (234.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (391.0ms)
+Completed in 1390ms (View: 546, DB: 390) | 200 OK [http://127.0.0.1/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-10 03:57:48) [GET]
+  [4;36;1mUser Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 313ms (View: 63, DB: 47) | 200 OK [http://127.0.0.1/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-02-10 03:58:11) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"password"=>"19738246kojf", "login"=>"juanmaflyer"}, "authenticity_token"=>"cTO0NvHyBRaRQUUHSmcyod1d3UbR06oD8zMckkx+U30="}
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (187.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'juanmaflyer') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 641ms (View: 110, DB: 218) | 200 OK [http://127.0.0.1/user_sessions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-02-10 03:58:18) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"password"=>"juanma88", "login"=>"juanmaflyer"}, "authenticity_token"=>"cTO0NvHyBRaRQUUHSmcyod1d3UbR06oD8zMckkx+U30="}
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'juanmaflyer') LIMIT 1[0m
+  [4;35;1mUser Load (78.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3001/
+Completed in 391ms (DB: 94) | 302 Found [http://127.0.0.1/user_sessions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-10 03:58:19) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Completed in 438ms (View: 407, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListaDeTareasController#index (for 127.0.0.1 at 2010-02-10 03:58:25) [GET]
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
 Rendering lista_de_tareas/index
-  [4;35;1mListaDeTarea Load (1.6ms)[0m   [0mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
-  [4;36;1mListaDeTarea Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
-  [4;35;1mTarea Load (0.7ms)[0m   [0mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 1) [0m
-  [4;36;1mTarea Load (5.3ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 2) [0m
-Completed in 170ms (View: 56, DB: 14) | 200 OK [http://localhost/lista_de_tareas]
-  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mListaDeTarea Load (46.0ms)[0m   [0;1mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
+  [4;35;1mListaDeTarea Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;36;1mTarea Load (16.0ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 1) [0m
+  [4;35;1mTarea Load (0.0ms)[0m   [0mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 2) [0m
+  [4;36;1mTarea Load (0.0ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 3) [0m
+  [4;35;1mTarea Load (0.0ms)[0m   [0mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 4) [0m
+  [4;36;1mTarea Load (0.0ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 6) [0m
+Completed in 344ms (View: 157, DB: 93) | 200 OK [http://127.0.0.1/lista_de_tareas]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing ListaDeTareasController#show (for 127.0.0.1 at 2010-02-10 04:47:57) [GET]
-  Parameters: {"id"=>"2"}
-  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-  [4;35;1mListaDeTarea Load (1.5ms)[0m   [0mSELECT `lista_de_tareas`.id FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
-  [4;36;1mListaDeTarea Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
-  [4;35;1mListaDeTarea Load (1.0ms)[0m   [0mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.`id` = 2) [0m
-Rendering template within layouts/lista_de_tareas
+Processing ListaDeTareasController#new (for 127.0.0.1 at 2010-02-10 03:58:27) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mListaDeTarea Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
+Rendering template within layouts/application
+Rendering lista_de_tareas/new
+Completed in 125ms (View: 31, DB: 32) | 200 OK [http://127.0.0.1/lista_de_tareas/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListaDeTareasController#create (for 127.0.0.1 at 2010-02-10 03:58:30) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"cTO0NvHyBRaRQUUHSmcyod1d3UbR06oD8zMckkx+U30=", "lista_de_tarea"=>{"nombre"=>"nueva"}}
+  [4;36;1mUser Columns (46.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mListaDeTarea Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mListaDeTarea Create (94.0ms)[0m   [0;1mINSERT INTO `lista_de_tareas` (`updated_at`, `nombre`, `user_id`, `created_at`) VALUES('2010-02-10 06:58:30', 'nueva', 1, '2010-02-10 06:58:30')[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/lista_de_tareas
+Completed in 281ms (DB: 202) | 302 Found [http://127.0.0.1/lista_de_tareas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListaDeTareasController#index (for 127.0.0.1 at 2010-02-10 03:58:30) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering lista_de_tareas/index
+  [4;36;1mListaDeTarea Load (0.0ms)[0m   [0;1mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
+  [4;35;1mListaDeTarea Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;36;1mTarea Load (0.0ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 1) [0m
+  [4;35;1mTarea Load (0.0ms)[0m   [0mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 2) [0m
+  [4;36;1mTarea Load (0.0ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 3) [0m
+  [4;35;1mTarea Load (0.0ms)[0m   [0mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 4) [0m
+  [4;36;1mTarea Load (0.0ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 6) [0m
+  [4;35;1mTarea Load (0.0ms)[0m   [0mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 9) [0m
+Completed in 375ms (View: 140, DB: 0) | 200 OK [http://127.0.0.1/lista_de_tareas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListaDeTareasController#new (for 127.0.0.1 at 2010-02-10 03:58:33) [GET]
+  [4;36;1mUser Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mListaDeTarea Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
+Rendering template within layouts/application
+Rendering lista_de_tareas/new
+Completed in 156ms (View: 15, DB: 32) | 200 OK [http://127.0.0.1/lista_de_tareas/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListaDeTareasController#create (for 127.0.0.1 at 2010-02-10 03:58:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"cTO0NvHyBRaRQUUHSmcyod1d3UbR06oD8zMckkx+U30=", "lista_de_tarea"=>{"nombre"=>""}}
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mListaDeTarea Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering lista_de_tareas/new
+Completed in 109ms (View: 15, DB: 31) | 200 OK [http://127.0.0.1/lista_de_tareas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListaDeTareasController#show (for 127.0.0.1 at 2010-02-10 03:58:37) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mListaDeTarea Load (16.0ms)[0m   [0;1mSELECT `lista_de_tareas`.id FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
+  [4;35;1mListaDeTarea Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;36;1mListaDeTarea Load (0.0ms)[0m   [0;1mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.`id` = 9) [0m
+Rendering template within layouts/application
 Rendering lista_de_tareas/show
-  [4;36;1mTarea Load (0.9ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 2) [0m
-Completed in 362ms (View: 107, DB: 10) | 200 OK [http://localhost/lista_de_tareas/2]
-  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mTarea Load (0.0ms)[0m   [0mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 9) [0m
+Completed in 157ms (View: 63, DB: 32) | 200 OK [http://127.0.0.1/lista_de_tareas/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing TareasController#new (for 127.0.0.1 at 2010-02-10 04:47:59) [GET]
-  Parameters: {"lista_de_tarea_id"=>"2"}
-  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-  [4;35;1mListaDeTarea Load (0.8ms)[0m   [0mSELECT `lista_de_tareas`.id FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
-  [4;36;1mListaDeTarea Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
-  [4;35;1mListaDeTarea Load (0.7ms)[0m   [0mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.`id` = 2) [0m
-  [4;36;1mTarea Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `tareas`[0m
-Rendering template within layouts/tareas
+Processing TareasController#new (for 127.0.0.1 at 2010-02-10 03:58:38) [GET]
+  Parameters: {"lista_de_tarea_id"=>"9"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mListaDeTarea Load (0.0ms)[0m   [0;1mSELECT `lista_de_tareas`.id FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
+  [4;35;1mListaDeTarea Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;36;1mListaDeTarea Load (0.0ms)[0m   [0;1mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.`id` = 9) [0m
+  [4;35;1mTarea Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `tareas`[0m
+Rendering template within layouts/application
 Rendering tareas/new
-Completed in 190ms (View: 58, DB: 13) | 200 OK [http://localhost/lista_de_tareas/2/tareas/new]
-  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Completed in 157ms (View: 63, DB: 32) | 200 OK [http://127.0.0.1/lista_de_tareas/9/tareas/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing TareasController#create (for 127.0.0.1 at 2010-02-10 04:48:01) [POST]
-  Parameters: {"commit"=>"Create", "tarea"=>{"nombre"=>"fsadfs"}, "authenticity_token"=>"ExS6mETAR12TqBfllR2dR0BU6CzS7/1txyWHuHXscCA=", "lista_de_tarea_id"=>"2"}
-  [4;35;1mListaDeTarea Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
-  [4;36;1mListaDeTarea Load (2.6ms)[0m   [0;1mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.`id` = 2) [0m
-  [4;35;1mTarea Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `tareas`[0m
-  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mTarea Create (0.9ms)[0m   [0mINSERT INTO `tareas` (`created_at`, `nombre`, `updated_at`, `lista_de_tarea_id`) VALUES('2010-02-10 06:48:01', 'fsadfs', '2010-02-10 06:48:01', 2)[0m
-  [4;36;1mSQL (10.9ms)[0m   [0;1mCOMMIT[0m
-Redirected to http://localhost:3000/lista_de_tareas/2
-Completed in 82ms (DB: 21) | 302 Found [http://localhost/lista_de_tareas/2/tareas]
-  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
-  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Processing TareasController#create (for 127.0.0.1 at 2010-02-10 03:58:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"cTO0NvHyBRaRQUUHSmcyod1d3UbR06oD8zMckkx+U30=", "tarea"=>{"nombre"=>""}, "lista_de_tarea_id"=>"9"}
+  [4;36;1mListaDeTarea Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;35;1mListaDeTarea Load (0.0ms)[0m   [0mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.`id` = 9) [0m
+  [4;36;1mTarea Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `tareas`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering tareas/new
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Completed in 437ms (View: 282, DB: 15) | 200 OK [http://127.0.0.1/lista_de_tareas/9/tareas]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing ListaDeTareasController#show (for 127.0.0.1 at 2010-02-10 04:48:01) [GET]
-  Parameters: {"id"=>"2"}
-  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-  [4;35;1mListaDeTarea Load (0.9ms)[0m   [0mSELECT `lista_de_tareas`.id FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
-  [4;36;1mListaDeTarea Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
-  [4;35;1mListaDeTarea Load (0.9ms)[0m   [0mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.`id` = 2) [0m
-Rendering template within layouts/lista_de_tareas
+Processing TareasController#create (for 127.0.0.1 at 2010-02-10 03:58:42) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"cTO0NvHyBRaRQUUHSmcyod1d3UbR06oD8zMckkx+U30=", "tarea"=>{"nombre"=>"asdfsdf"}, "lista_de_tarea_id"=>"9"}
+  [4;35;1mListaDeTarea Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;36;1mListaDeTarea Load (0.0ms)[0m   [0;1mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.`id` = 9) [0m
+  [4;35;1mTarea Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `tareas`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTarea Create (16.0ms)[0m   [0mINSERT INTO `tareas` (`updated_at`, `nombre`, `lista_de_tarea_id`, `created_at`) VALUES('2010-02-10 06:58:42', 'asdfsdf', 9, '2010-02-10 06:58:42')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/lista_de_tareas/9
+Completed in 78ms (DB: 32) | 302 Found [http://127.0.0.1/lista_de_tareas/9/tareas]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListaDeTareasController#show (for 127.0.0.1 at 2010-02-10 03:58:43) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mListaDeTarea Load (0.0ms)[0m   [0mSELECT `lista_de_tareas`.id FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
+  [4;36;1mListaDeTarea Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;35;1mListaDeTarea Load (16.0ms)[0m   [0mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.`id` = 9) [0m
+Rendering template within layouts/application
 Rendering lista_de_tareas/show
-  [4;36;1mTarea Load (1.1ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 2) [0m
-  [4;35;1mTarea Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `tareas`[0m
-Completed in 205ms (View: 89, DB: 11) | 200 OK [http://localhost/lista_de_tareas/2]
-  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mTarea Load (0.0ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 9) [0m
+  [4;35;1mTarea Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `tareas`[0m
+Completed in 141ms (View: 16, DB: 46) | 200 OK [http://127.0.0.1/lista_de_tareas/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing ListaDeTareasController#index (for 127.0.0.1 at 2010-02-10 04:48:05) [GET]
-  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c6004103a8aff41ffef07b19d5b470e6a1de65c05727cf1f566a6fef54fd892c9c5b99fcc85af8e0f626aa286be3d34897aee8a299fcf96bdf94b1775b8acd02') LIMIT 1[0m
-Rendering template within layouts/lista_de_tareas
-Rendering lista_de_tareas/index
-  [4;36;1mListaDeTarea Load (0.9ms)[0m   [0;1mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
-  [4;35;1mListaDeTarea Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
-  [4;36;1mTarea Load (6.0ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 1) [0m
-  [4;35;1mTarea Load (0.8ms)[0m   [0mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 2) [0m
-Completed in 180ms (View: 60, DB: 14) | 200 OK [http://localhost/lista_de_tareas]
+Processing TareasController#destroy (for 127.0.0.1 at 2010-02-10 03:58:48) [DELETE]
+  Parameters: {"authenticity_token"=>"cTO0NvHyBRaRQUUHSmcyod1d3UbR06oD8zMckkx+U30=", "id"=>"20", "lista_de_tarea_id"=>"9"}
+  [4;36;1mListaDeTarea Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;35;1mListaDeTarea Load (0.0ms)[0m   [0mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.`id` = 9) [0m
+  [4;36;1mTarea Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `tareas`[0m
+  [4;35;1mTarea Load (0.0ms)[0m   [0mSELECT * FROM `tareas` WHERE (`tareas`.`id` = 20) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTarea Destroy (78.0ms)[0m   [0mDELETE FROM `tareas` WHERE `id` = 20[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/lista_de_tareas/9
+Completed in 140ms (DB: 94) | 302 Found [http://127.0.0.1/lista_de_tareas/9/tareas/20]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListaDeTareasController#show (for 127.0.0.1 at 2010-02-10 03:58:49) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mListaDeTarea Load (0.0ms)[0m   [0mSELECT `lista_de_tareas`.id FROM `lista_de_tareas` WHERE (`lista_de_tareas`.user_id = 1) [0m
+  [4;36;1mListaDeTarea Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;35;1mListaDeTarea Load (0.0ms)[0m   [0mSELECT * FROM `lista_de_tareas` WHERE (`lista_de_tareas`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering lista_de_tareas/show
+  [4;36;1mTarea Load (0.0ms)[0m   [0;1mSELECT * FROM `tareas` WHERE (`tareas`.lista_de_tarea_id = 9) [0m
+Completed in 110ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/lista_de_tareas/9]
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateListaDeTareas (20100208193202)
+Migrating to CreateUsers (20100208193700)
+Migrating to CreateTareas (20100208215951)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mdescribe `lista_de_tareas`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `lista_de_tareas`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `tareas`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `tareas`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `tareas`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW VARIABLES LIKE 'collation_database'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW VARIABLES LIKE 'character_set_database'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `lista_de_tareas`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `lista_de_tareas`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `lista_de_tareas`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `tareas`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `tareas`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW KEYS FROM `tareas`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'hola') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '5ad2ae08f1f8bd8e9d646fb8aed6bc89c2c6a534790e5a6c26e618a3e6925a1877c3a61952a9fe6794c4e229c05825f258ae1678df40412a0f697b21238a78a4') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'hola') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '16a066a2e988a5f89e1e6bdeb254fe9e3f0bea71aef0c46570a9890fca803d4d36082b626280b39af7af16cc24f2138c4dc28b9dd5fc84853d2ea84fe845a2af') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'hola') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '16a066a2e988a5f89e1e6bdeb254fe9e3f0bea71aef0c46570a9890fca803d4d36082b626280b39af7af16cc24f2138c4dc28b9dd5fc84853d2ea84fe845a2af') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'juanmaflyer@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'juanma') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'f35d3b7f6d8295160e1bd9698893a0317a21487826e5f69ed68ca5d1fd965243cced7910bb496dbdaae53c573ae8da164ba51a1ed1a02c6553862f599cec4ff9') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'eltito@delagente.com.ar') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'juankarlos') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c9afd7147f4ec3958a1cbe8dd39331d771df64cf1e437290168188f1ed895adbd92bce902b16a3aabc5ef56bf5893bdd9a0bc708e846232b3f9091287db16389') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'eltito@delagente.com.ar') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'juankarlos') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '3a63f3ca513cb0507206ca07c66b1dde07b9f2b2b6c848cf4b43f9b00ef8ba7a8825ad256b147bd10173af323857bda0965d23c11def9b4d837ab82c9d816285') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'markito@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'satari') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '47cc6083f37b781fa0cf75ff53ee8365af781af372434ab34905ca373f10a7427c1d784ee9399a4b40535cc57d408b34637e035ae45ac3f310593369bee7523f') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'susi@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'tupi') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '9a5476587f9adf1055507102f9ab41edfa73c0337059687fbc43e01baab69cbe80a40eb275cfbe95735c2b75d6ce007856451fa4ed9c1af2f69da5848d548e8a') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO `users` (`updated_at`, `crypted_password`, `password_salt`, `persistence_token`, `login`, `email`, `created_at`) VALUES('2010-02-11 01:31:30', '63094ca9c0babc2c81b81ad4cbccd2931c6feb5e012284b358c394f035379b5bc89fd5f290ed44c2d935b5fcad5d1838f4b54d4f4f76438b951e746241f335ea', 'KywQaM5eNWVrnORKg1hR', '9a5476587f9adf1055507102f9ab41edfa73c0337059687fbc43e01baab69cbe80a40eb275cfbe95735c2b75d6ce007856451fa4ed9c1af2f69da5848d548e8a', 'tupi', 'susi@gmail.com', '2010-02-11 01:31:30')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mUser Delete all (16.0ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (3)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Destroy (0.0ms)[0m   [0;1mDELETE FROM `users` WHERE `id` = 3[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'd43e8d5d0b937c6c069d3c19837ab9298a5d1e33b4f30f3f6be5051a2cea0dbe3eeaf0c785dc6c5a12dca34701575b67b9cc2ed39d6eb4119ed4443b2a2fca28') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'sotoko@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'kuki') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '87d16ff9d32bac010c033545db0a64b50d445431e89abd0b1f420506ff9af7d6c83cc34207a8ac9ad893bb01b8b422d8a4e793662e72b92d4193bb473e718255') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO `users` (`updated_at`, `crypted_password`, `password_salt`, `persistence_token`, `login`, `email`, `created_at`) VALUES('2010-02-11 01:41:32', 'bab7a76112ce960555526f3814fc56660d2ab2cb24a05ac202125a5672ffb74fcddcd16d672e62834e39f6bb3a67d8675b59bd4f5c3d28d61de96cf582bcc595', 'cC0F7K8-3q9QKNx5ygjO', '87d16ff9d32bac010c033545db0a64b50d445431e89abd0b1f420506ff9af7d6c83cc34207a8ac9ad893bb01b8b422d8a4e793662e72b92d4193bb473e718255', 'kuki', 'sotoko@gmail.com', '2010-02-11 01:41:32')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 4) [0m
+  [4;35;1mUser Delete all (0.0ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (4)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-10 22:45:17) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 1985ms (View: 1970, DB: 15) | 200 OK [http://127.0.0.1/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-10 22:45:24) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 125ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-10 22:45:27) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 46ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-10 22:45:35) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (16.0ms)
+Completed in 187ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-10 22:45:43) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"surutu", "password"=>"surutu", "login"=>"okito", "email"=>"juanmaflyer@gmail.com"}, "commit"=>"Enviar", "authenticity_token"=>"WZndbq0YlT9fgBmMNMg81Y/W6Pssy2d0xb1JKYdNPi0="}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'juanmaflyer@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'okito') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '4529135ef6dcb79d2ef1d709d5651c5f8af81e6bdc2434cd7989e9b99033e22b78a681b87b82e8bc3c2ab02a13eb56df44abcc1b388e59b256e889fb5b57f4e9') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (31.0ms)
+Completed in 531ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-10 22:45:55) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"surutu", "password"=>"surutu", "login"=>"juanmaflyer", "email"=>"juanmaflyer@gmail.com"}, "commit"=>"Enviar", "authenticity_token"=>"WZndbq0YlT9fgBmMNMg81Y/W6Pssy2d0xb1JKYdNPi0="}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'juanmaflyer@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'juanmaflyer') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '3faedf2a0ad3ae80acd7dc5db1942fe70041eb759f33437d5dc2e75f6c01a9d9da3f4936f52d8834cd1228744fce29915aba1c67f84496eb21a152c4b3c3e49b') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (15.0ms)
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (94.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (32.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `todo_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `todo_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `lista_de_tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `tareas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `lista_de_tarea_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208215951')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208193202')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100208193700')[0m

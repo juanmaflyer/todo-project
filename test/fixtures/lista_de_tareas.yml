@@ -1,7 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  nombre: MyString
+lt1:
+  nombre: lt_jardin
+  user: juan
 
-two:
-  nombre: MyString
+lt2:
+  nombre: lt_trabajo
+  user: juan
+  
+lt3:  
+  nombre: lt_facultad
+  user: juan

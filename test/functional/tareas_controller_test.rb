@@ -1,10 +1,14 @@
 require 'test_helper'
 
 class TareasControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:tareas)
+
+  def setup
+	usr  = User.create(:login=>"jack",:email=>"juanmaflyer@gmail.com",:password=>"asdfg",:password_confirmation=>"asdfg")
+	usr2 = User.create(:login=>"juanmaflyer",:email=>"other@mail.com",:password=>"asdfg",:password_confirmation=>"asdfg")
+    ## Esta linea activa el authlogic... encontrar una solucion a esto porque es horrible!
+	Authlogic::Session::Base.controller = Authlogic::ControllerAdapters::RailsAdapter.new(self)
+	session = UserSession.create(:login=>"jack",:password=>"asdfg")
+	lt = lista_de_tareas(:lt1)
   end
 
   test "should get new" do
@@ -14,15 +18,10 @@ class TareasControllerTest < ActionController::TestCase
 
   test "should create tarea" do
     assert_difference('Tarea.count') do
-      post :create, :tarea => { }
+      post :create, :tarea => { :nombre => "Nombre Prueba" }
     end
 
     assert_redirected_to tarea_path(assigns(:tarea))
-  end
-
-  test "should show tarea" do
-    get :show, :id => tareas(:one).to_param
-    assert_response :success
   end
 
   test "should get edit" do

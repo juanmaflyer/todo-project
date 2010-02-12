@@ -1,6 +1,14 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 require 'test_help'
+require 'mocha'
+require 'stories'
+require 'stories/runner'
+require 'webrat'
+
+Webrat.configure do |config|
+  config.mode = :rails
+end
 
 class ActiveSupport::TestCase
   # Transactional fixtures accelerate your tests by wrapping each test method
@@ -35,4 +43,15 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  
+	class ActionController::IntegrationTest
+
+		def login(usuario,password)
+			visit "/"
+			click_link "Login"
+			fill_in :login, :with => usuario
+			fill_in :password, :with => password
+			click_button "Submit"
+		end
+	end
 end

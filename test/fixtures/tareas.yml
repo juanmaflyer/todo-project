@@ -1,7 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  nombre: MyString
+t1:
+  nombre: tarea_1
+  lista_de_tarea : lt1
 
-two:
-  nombre: MyString
+t2:
+  nombre: tarea_3
+  lista_de_tarea : lt1
+  
+t3:
+  nombre: tarea_3
+  lista_de_tarea : lt2
